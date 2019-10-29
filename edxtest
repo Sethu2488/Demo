@@ -11,13 +11,17 @@
 
 
 <body>
+<style>
+body {
+background-color: #d24dff
+}
 
 <H1> Hello Azure Web App! </H1>
 
 <p> Welcome to Azure Web App. Thank you </p>
 
 
-
+</style>
 </body>
 
 </html>
