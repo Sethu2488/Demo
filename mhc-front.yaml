@@ -10,10 +10,10 @@ spec:
      app: mhc-back 
   spec: 
    containers: 
-   - name: mhc-back
+   -name: mhc-back
     image: redis
    ports: 
-    - containerPort: 6379
+    -containerPort: 6379
    name: redis
    
 ---
@@ -23,7 +23,7 @@ metadata:
  name: mhc-back 
 spec: 
  ports: 
- - port: 6379
+ -port: 6379
   selector: 
    app: mhc-back 
    
@@ -45,18 +45,18 @@ minReadySeconds: 5
    app: mhc-front
   spec: 
    containers: 
-   - name: mhc-front
+   -name: mhc-front
    image: akshandsonlabacr.azurecr
    imagePullPolicy: Always
    ports: 
-    - container port: 80
+    -container port: 80
    resources: 
     requests: 
       cpu: 250m 
    limits: 
       cpu: 500m
   env:
-  - name: Redis
+  -name: Redis
     value: "mhc-back"
     
 ---
@@ -67,6 +67,6 @@ metadata:
 spec: 
  type: LoadBalancer
  ports: 
- - ports: 80 
+ -ports: 80 
  Selector: 
   app: mhc-front
