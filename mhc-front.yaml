@@ -14,8 +14,7 @@ spec:
     image: redis
    ports: 
     -containerPort: 6379
-   name: redis
-   
+   name: redis   
 ---
 apiVersion: v1
 kind: Service
@@ -25,8 +24,7 @@ spec:
  ports: 
  -port: 6379
   selector: 
-   app: mhc-back 
-   
+   app: mhc-back    
 --- 
 apiVersion: apps/vlbetal
 kind: Deployment 
@@ -58,7 +56,6 @@ minReadySeconds: 5
   env:
   -name: Redis
     value: "mhc-back"
-    
 ---
 apiVersion: V1
 kind: Service
