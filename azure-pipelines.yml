@@ -1,10 +1,4 @@
 # Starter pipeline
-- task: KubernetesManifest@0
-  inputs:
-    action: 'deploy'
-    kubernetesServiceConnection: 'vseta123 - kubernetes'
-    namespace: 'setha'
-    manifests: 'setha123'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
