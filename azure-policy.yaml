@@ -39,7 +39,9 @@ resources:
     policyRule: "[parameters('policyDefinitionObject').policyRule]"
 - type: Microsoft.Authorization/policyAssignments
   name: "[parameters('policyAssignmentName')]"
-  apiVersion: '2018-05-01'
+---
+  apiVersion: 'v1'
+  kind: Services
   location: "[parameters('location')]"
   dependsOn:
   - "[resourceId('Microsoft.Authorization/policyDefinitions/', parameters('policyDefinitionObject').name)]"
